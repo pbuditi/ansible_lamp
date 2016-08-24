@@ -10,7 +10,7 @@
     - common
 
 - name: configure and deploy the webservers and application code
-  hosts: webservers
+  hosts: web
   user: prad
   sudo: yes
 
@@ -18,7 +18,7 @@
     - web
 
 - name: deploy MySQL and configure the databases
-  hosts: dbservers
+  hosts: db
   user: prad
   sudo: yes
 
