@@ -24,3 +24,11 @@
 
   roles:
     - db
+
+- name: install git
+  hosts: app
+  user: prad
+  sudo: yes
+
+  roles:
+    - app
