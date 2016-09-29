@@ -24,3 +24,11 @@
 
   roles:
     - db
+
+- name: install java 
+  hosts: app
+  user: prad
+  sudo: yes
+
+  roles:
+    - app
