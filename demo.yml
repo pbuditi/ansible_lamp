@@ -1,7 +1,7 @@
 ---
 # This playbook deploys the whole application stack in this site.
 
-- name: apply common configuration to all nodes
+- name: apply common configuration to all nodes on web servers
   hosts: web
   remote_user: prad
   roles:
