@@ -4,8 +4,13 @@ node1
 [db]
 node1
 
+[app]
+node1
+
 [all:children]
 web
 db
+app
+
 
 
