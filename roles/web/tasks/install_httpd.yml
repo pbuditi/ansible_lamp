@@ -7,5 +7,10 @@
    - httpd
    - git
    
+- name: Creates the virtualhost config file
+  template: src=gallery.conf.j2 dest=/etc/httpd/conf.d/gallery.conf
+  notify:
+  - restart httpd
+   
 - name: http service state
   service: name=httpd state=started enabled=yes
