@@ -4,6 +4,3 @@
 
 - name: Copy the code from repository
   git: repo={{ repository }} dest= {{ document_root }}
-
-- name: Creates the virtualhost config file
-  template: src=gallery.conf.j2 dest=/etc/httpd/conf.d/gallery.conf
