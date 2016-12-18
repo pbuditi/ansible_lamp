@@ -1,16 +1,12 @@
 [web]
-node1
+appserver1.edureka.com
 
 [db]
-node1
-
-[app]
-node1
+appserver1.edureka.com
 
 [all:children]
 web
 db
-app
 
 
 
