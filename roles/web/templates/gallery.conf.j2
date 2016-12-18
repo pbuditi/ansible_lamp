@@ -1,6 +1,6 @@
-Listen {{ hostvars[host].httpd_port }}
+Listen {{ httpd_port }}
 
-<VirtualHost *:{{hostvars[host].httpd_port }}>
- ServerName {{hostvars[host].webserver }}
- DocumentRoot "{{hostvars[host].document_root }}"
+<VirtualHost *:{{ httpd_port }}>
+ ServerName {{ webserver }}
+ DocumentRoot "{{ document_root }}"
 </VirtualHost>
