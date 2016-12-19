@@ -3,32 +3,18 @@
 
 - name: apply common configuration to all nodes
   hosts: all
-  user: prad
-  sudo: yes
+  remote_user: edureka
+  become: yes
+  become_user: root
 
   roles:
     - common
 
 - name: configure and deploy the webservers and application code
   hosts: web
-  user: prad
-  sudo: yes
+  remote_user: edureka
+  become: yes
+  become_user: root
 
   roles:
     - web
-
-- name: deploy MySQL and configure the databases
-  hosts: db
-  user: prad
-  sudo: yes
-
-  roles:
-    - db
-
-- name: install java 
-  hosts: app
-  user: prad
-  sudo: yes
-
-  roles:
-    - app

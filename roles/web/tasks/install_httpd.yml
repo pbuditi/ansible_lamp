@@ -11,6 +11,11 @@
   template: src=gallery.conf.j2 dest=/etc/httpd/conf.d/gallery.conf
   notify:
   - restart httpd
-   
+
+- name: update iptables to add port   
+  lineinfile: dest=/etc/sysconfig/iptables create=yes state=present regexp="{{ httpd_port }}" insertafter="^:OUTPUT " line="-A INPUT -p tcp --dport {{ httpd_port }} -j ACCEPT"
+  notify: restart iptables
+
 - name: http service state
   service: name=httpd state=started enabled=yes
+  tags: httpd

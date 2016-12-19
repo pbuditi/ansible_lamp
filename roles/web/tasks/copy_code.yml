@@ -3,4 +3,4 @@
 # the version control system.
 
 - name: Copy the code from repository
-  git: repo={{ repository }} dest= {{ document_root }}
+  git: repo={{ repository }} dest={{ document_root }}
