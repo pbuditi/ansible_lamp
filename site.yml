@@ -3,8 +3,8 @@
 
 - name: apply common configuration to all nodes
   hosts: all
-  user: prad
-  sudo: yes
+  become_user: ubuntu
+  become_method: sudo
 
   roles:
     - common
